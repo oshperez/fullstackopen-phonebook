@@ -6,9 +6,10 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build:ui": "cd ../phonebook-frontend/ && npm run build --prod && cp -r build ../phonebook",
+    "build:ui": "rm -rf build && cd ../phonebook-frontend/ && npm run build --prod && cp -r build ../phonebook",
     "deploy": "git push heroku main",
-    "deploy:full": "npm run build:ui && git add . && git commit -m frontend build && git push && npm run deploy",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
+    "logs:prod": "heroku logs --tail",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Osmani Hernandez",
