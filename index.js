@@ -4,7 +4,8 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
+app.use(cors()); // Allows requests from other origins
+app.use(express.static("build")); // Allows Express to show static content
 app.use(express.json());
 
 morgan.token("response-body", (req, res) => {

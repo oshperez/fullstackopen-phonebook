@@ -1,7 +1,7 @@
-POST http://localhost:3001/api/persons
+POST https://fast-mesa-84936.herokuapp.com/api/persons
 Content-Type: application/json
 
 {
-  "name": "Guido van um",
+  "name": "Guido Van Rossum",
   "number": "332-4563334"
 }
