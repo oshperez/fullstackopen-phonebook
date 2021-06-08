@@ -116,7 +116,7 @@ app.put("/api/persons/:id", (request, response, next) => {
     runValidators: true,
     context: "query",
   })
-    .then((updatedPerson) => updatedPerson.toJSON)
+    .then((updatedPerson) => updatedPerson.toJSON())
     .then((updatedAndFormatedPerson) => {
       response.json(updatedAndFormatedPerson);
     })
